@@ -73,15 +73,9 @@ export default function DashboardPage() {
         <div className="dashboard-box">
           <h1>Welcome to Your Dashboard</h1>
           {user && <p>Logged in as: {user.email}</p>}
-          <a href="/upload" className="btn">
-            Upload Content
-          </a>
-          <a href="/settings" className="btn">
-            Settings
-          </a>
-          <button className="btn" onClick={handleLogout}>
-            Logout
-          </button>
+          <a href="/upload" className="btn">Upload Content</a>
+          <a href="/settings" className="btn">Settings</a>
+          <button className="btn" onClick={handleLogout}>Logout</button>
         </div>
       </div>
     </div>
