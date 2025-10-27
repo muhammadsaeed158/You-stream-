@@ -17,6 +17,8 @@ export default function HomePage() {
         <div className="hero-btns">
           <Link href="/upload" className="btn btn-primary">Upload Now</Link>
           <Link href="/dashboard" className="btn btn-outline">My Dashboard</Link>
+          <Link href="/about" className="btn btn-outline">About</Link>
+          <Link href="/contact" className="btn btn-outline">Contact</Link>
         </div>
       </section>
 
@@ -35,71 +37,84 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <style jsx>{`
+        .home .hero {
+          text-align: center;
+          padding: 60px 10px;
+        }
+        .home .hero h1 {
+          font-size: 2.2rem;
+          color: var(--accent);
+        }
+        .home .hero p {
+          color: var(--muted);
+          margin-top: 8px;
+          font-size: 1.1rem;
+        }
+        .hero-btns {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .btn {
+          background: var(--accent);
+          color: white;
+          padding: 10px 22px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: 0.3s;
+        }
+        .btn:hover {
+          opacity: 0.85;
+        }
+        .btn-outline {
+          background: white;
+          color: var(--accent);
+          border: 2px solid var(--accent);
+        }
+        .cards {
+          margin-top: 50px;
+        }
+        .cards h2 {
+          text-align: center;
+          margin-bottom: 24px;
+          color: var(--text);
+        }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 20px;
+        }
+        .card {
+          background: var(--card);
+          border-radius: var(--radius);
+          box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+          overflow: hidden;
+          transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .card-body {
+          padding: 16px;
+        }
+        .card-body h3 {
+          margin: 0;
+          color: var(--accent);
+          font-size: 1.1rem;
+        }
+        .card-body p {
+          color: var(--muted);
+          margin: 8px 0 12px;
+        }
+      `}</style>
     </div>
   );
 }
-
-/* Inline CSS for Home */
-const style = document.createElement("style");
-style.innerHTML = `
-  .home .hero {
-    text-align: center;
-    padding: 60px 10px;
-  }
-  .home .hero h1 {
-    font-size: 2.2rem;
-    color: var(--accent);
-  }
-  .home .hero p {
-    color: var(--muted);
-    margin-top: 8px;
-    font-size: 1.1rem;
-  }
-  .hero-btns {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .cards {
-    margin-top: 50px;
-  }
-  .cards h2 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: var(--text);
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
-  .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  .card:hover { transform: translateY(-5px); }
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  .card-body {
-    padding: 16px;
-  }
-  .card-body h3 {
-    margin: 0;
-    color: var(--accent);
-    font-size: 1.1rem;
-  }
-  .card-body p {
-    color: var(--muted);
-    margin: 8px 0 12px;
-  }
-`;
-document.head.appendChild(style);
