@@ -13,7 +13,7 @@ const nextConfig = {
     ],
   },
 
-  // ✅ Add global CSS support
+  // ✅ Enable global CSS support (optional)
   webpack(config) {
     config.module.rules.push({
       test: /\.css$/i,
@@ -30,13 +30,10 @@ const nextConfig = {
     NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
     NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
     NEXT_PUBLIC_FIREBASE_APP_ID: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
-  },
-
-  // ✅ Experimental features (optional but recommended)
-  experimental: {
-    appDir: true,
+    CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
