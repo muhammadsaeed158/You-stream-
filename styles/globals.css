@@ -1,0 +1,132 @@
+/* 🌐 globals.css */
+/* Font + Reset + Variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --accent: #0070f3;
+  --accent-dark: #0052a3;
+  --background: #f9fafc;
+  --text: #1a1a1a;
+  --muted: #555;
+  --card: #ffffff;
+  --radius: 12px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* 🔹 Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 🔹 Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* 🔹 Navbar (Fallback Style if inline not loaded) */
+nav {
+  background-color: var(--accent);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* 🔹 Footer */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* 🔹 Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
