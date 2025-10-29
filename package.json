@@ -15,3 +15,7 @@
     "cloudinary": "^1.41.0"
   }
 }
+{
+  "type": "module",
+  ...
+}
