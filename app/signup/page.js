@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from "@/firebase/firebaseConfig";
+import { app } from "@/lib/firebaseConfig"; // ✅ Corrected path
 
 export default function SignUpPage() {
   const auth = getAuth(app);
