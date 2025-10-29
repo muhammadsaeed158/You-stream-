@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { app } from "@/firebase/firebaseConfig";
+import { app } from "@/lib/firebaseConfig";
 
 export default function DashboardPage() {
   const auth = getAuth(app);
