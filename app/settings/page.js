@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getAuth, updateProfile } from "firebase/auth";
-import { app } from "@/firebase/firebaseConfig";
+import app from "@/lib/firebaseConfig"; // ✅ Fixed import path
 
 export default function SettingsPage() {
   const auth = getAuth(app);
