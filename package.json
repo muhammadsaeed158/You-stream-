@@ -1,6 +1,8 @@
 {
   "name": "you-stream",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +12,8 @@
     "next": "14.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "lucide-react": "^0.264.0",
-    "cloudinary": "^1.41.0"
+    "firebase": "^10.8.1",
+    "cloudinary": "^1.41.0",
+    "lucide-react": "^0.552.0"
   }
 }
