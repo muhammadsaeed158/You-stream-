@@ -2,6 +2,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+// Import Monetization Components
+import Monetization from "../components/Monetization";
+import AdBanner from "../components/AdBanner";
+import Sponsorship from "../components/Sponsorship";
+
 export default function HomePage() {
   const [welcome, setWelcome] = useState("Loading...");
   useEffect(() => {
@@ -38,6 +43,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== Monetization / Ads / Sponsorship Sections ===== */}
+      <Monetization />
+      <AdBanner />
+      <Sponsorship />
+
       <style jsx>{`
         .home .hero {
           text-align: center;
@@ -68,9 +78,7 @@ export default function HomePage() {
           font-weight: 500;
           transition: 0.3s;
         }
-        .btn:hover {
-          opacity: 0.85;
-        }
+        .btn:hover { opacity: 0.85; }
         .btn-outline {
           background: white;
           color: var(--accent);
